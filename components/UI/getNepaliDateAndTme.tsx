@@ -1,46 +1,46 @@
 
-import axios from 'axios';
-import * as cheerio from 'cheerio';
+// import axios from 'axios';
+// import * as cheerio from 'cheerio';
 
-interface NepaliDateInfo {
-  nepaliDate: string;
-  currentTime: string;
-  englishDate: string;
-}
-const getNepaliDateAndTime = async (): Promise<NepaliDateInfo> => {
-  try {
-    const { data } = await axios.get('https://www.hamropatro.com/');
-    const $ = cheerio.load(data);
+// interface NepaliDateInfo {
+//   nepaliDate: string;
+//   currentTime: string;
+//   englishDate: string;
+// }
+// const getNepaliDateAndTime = async (): Promise<NepaliDateInfo> => {
+//   try {
+//     const { data } = await axios.get('https://www.hamropatro.com/');
+//     const $ = cheerio.load(data);
 
-    const nepaliDate = $('#top .container12 .column4 .date .nep')
-      .text()
-      .trim()
-      .replace('Nepali Date:', '')
-      .trim();
+//     const nepaliDate = $('#top .container12 .column4 .date .nep')
+//       .text()
+//       .trim()
+//       .replace('Nepali Date:', '')
+//       .trim();
 
-    const currentTime = $('#top .container12 .column4 .time span')
-      .text()
-      .trim()
-      .replace('Current time:', '')
-      .trim();
+//     const currentTime = $('#top .container12 .column4 .time span')
+//       .text()
+//       .trim()
+//       .replace('Current time:', '')
+//       .trim();
 
-    const englishDate = $('#top .container12 .column4 .time .eng')
-      .text()
-      .trim()
-      .replace('English date:', '')
-      .trim();
+//     const englishDate = $('#top .container12 .column4 .time .eng')
+//       .text()
+//       .trim()
+//       .replace('English date:', '')
+//       .trim();
 
-    return {
-      nepaliDate: nepaliDate || 'Nepali Date not found',
-      currentTime: currentTime || 'Current time not found',
-      englishDate: englishDate || 'English date not found',
-    };
-  } catch (error) {
-    throw new Error('Failed to scrape Nepali date and time');
-  }
-};
+//     return {
+//       nepaliDate: nepaliDate || 'Nepali Date not found',
+//       currentTime: currentTime || 'Current time not found',
+//       englishDate: englishDate || 'English date not found',
+//     };
+//   } catch (error) {
+//     throw new Error('Failed to scrape Nepali date and time');
+//   }
+// };
   async function getNepaliCalender() {
-  const { nepaliDate, currentTime, englishDate } = await getNepaliDateAndTime();
+  // const { nepaliDate, currentTime, englishDate } = await getNepaliDateAndTime();
 
   return (
     
