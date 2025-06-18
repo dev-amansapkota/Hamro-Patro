@@ -113,7 +113,7 @@ const HeroSecton = () => {
                 
             </div>
               <div className=' rounded-full mx-3 my-3 relative w-fit  drop-shadow-2xl  drop-shadow-inherit rounded  hover:scale-105 translate-1 duration-300 '>
-                <img src={'https://images.hamro-files.com/uavSnYB8V8Hjf02_Kxd-FLHE69Q=/300x300/smart/https://rpcdn.ratopati.com/media/albums/darchula_rFBrYPWETi.jpg'} className='h-55 w-33 text-ellipsis object-cover bg-gradient-to-b from-gray-600 opacity-0 to-black opacity-100 '
+                <img src={'https://images.hamro-files.com/uavSnYB8V8Hjf02_Kxd-FLHE69Q=/300x300/smart/https://rpcdn.ratopati.com/media/albums/darchula_rFBrYPWETi.jpg'} className='h-55 w-33 text-ellipsis object-cover bg-gradient-to-b from-gray-600 opacity-0 to-black opacity-100 rounded-xl '
                 />
                 
                 <h3 className='text-white  absolute -my-12 left-2 px-2 text-sm py-1  rounded'>स्कटल्यान्डविरुद्ध फिल्डिङमा नेपाल</h3>
