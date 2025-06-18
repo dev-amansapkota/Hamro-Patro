@@ -21,16 +21,17 @@ const Header = () => {
            <li>Podcast</li>
            <li>News</li>
            <li>Blog</li>
+            <li>Gold/Silver</li>
 
         </ul>
       )}
         <div className='my-2 mx-2 flex '>
-            <button onClick={()=>setIsOpen(!isOpen)}><HiOutlineMenuAlt4 className='text-black font-extrabold my-3 mx-2'/></button>
+            <button onClick={()=>setIsOpen(!isOpen)}><HiOutlineMenuAlt4 className='text-black text-xl font-extrabold my-3 mx-2'/></button>
             <img height={10} width={50}
             src='https://www.hamropatro.com/images/hamropatro.png'></img>
-            <h2 className='text-black font-serif  font-[16px] font-bold my-3 mx-4'> Hamro Patro</h2>
+            <h2 className='text-black font-bold my-3 mx-4'> HAMRO PATRO</h2>
         </div>
-        <ul className='flex space-x-6 justify-end mr-7 text-black -my-12 '>
+        <ul className='flex space-x-6 justify-end mr-7 text-black -my-12  cursor-pointer'>
             <li className='hover:text-red-700 hover:underline hover:underline-offset-12 '>
                 Remit
             </li>
@@ -60,6 +61,9 @@ const Header = () => {
             </li>
              <li className='hover:text-red-700 hover:underline hover:underline-offset-12'>
               Blog
+            </li>
+             <li className='hover:text-red-700 hover:underline hover:underline-offset-12'>
+             Gold/Silver
             </li>
 
         </ul>
