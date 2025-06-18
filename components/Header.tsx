@@ -1,45 +1,64 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  
+
   return (
     <div>
-        
+      {isOpen && (
+        <ul className=' absolute flex shadow-md flex-col border rounded-md text-black w-48 z-50 left-2 top-14 bg-gray-100 px-4 py-2 space-y-2'>
+          <li>Remit</li>
+          <li>Mart</li>
+          <li>Gifts</li>
+          <li>Recharge</li>
+          <li>Bank Rates</li>
+          <li>Jyotish</li>
+          <li>Rashifal</li>
+           <li>Podcast</li>
+           <li>News</li>
+           <li>Blog</li>
+
+        </ul>
+      )}
         <div className='my-2 mx-2 flex'>
-            <HiOutlineMenuAlt4 className='text-black font-extrabold my-3 mx-2'/>
+            <button onClick={()=>setIsOpen(!isOpen)}><HiOutlineMenuAlt4 className='text-black font-extrabold my-3 mx-2'/></button>
             <img height={10} width={50}
             src='https://www.hamropatro.com/images/hamropatro.png'></img>
             <h2 className='text-black font-serif  font-[16px] font-bold my-3 mx-4'> Hamro Patro</h2>
         </div>
-        <ul className='flex space-x-6 justify-end mr-7 text-black -my-12 f'>
-            <li>
+        <ul className='flex space-x-6 justify-end mr-7 text-black -my-12 '>
+            <li className='hover:text-red-700 hover:underline hover:underline-offset-12 '>
                 Remit
             </li>
-             <li>
+             <li className='hover:text-red-700 hover:underline hover:underline-offset-12'>
                Mart
             </li>
-             <li>
+             <li className='hover:text-red-700 hover:underline hover:underline-offset-12'>
                 Gifts
             </li>
-             <li>
+             <li className='hover:text-red-700 hover:underline hover:underline-offset-12'>
                 Recharge
             </li>
-             <li>
+             <li className='hover:text-red-700 hover:underline hover:underline-offset-12'>
                Bank Rates
             </li>
-             <li>
+             <li className='hover:text-red-700 hover:underline hover:underline-offset-12'>
                Jyotish
             </li>
-             <li>
+             <li className='hover:text-red-700 hover:underline hover:underline-offset-12'>
                Rashifal
             </li>
-             <li>
+             <li className='hover:text-red-700 hover:underline hover:underline-offset-12'>
                Podcasts
             </li>
-             <li>
+             <li className='hover:text-red-700 hover:underline hover:underline-offset-12'>
               News
             </li>
-             <li>
+             <li className='hover:text-red-700 hover:underline hover:underline-offset-12'>
               Blog
             </li>
 
