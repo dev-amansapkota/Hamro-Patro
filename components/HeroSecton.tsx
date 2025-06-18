@@ -1,7 +1,28 @@
-import React from 'react'
+'use client'
+import React, {  useState } from 'react'
 import { GrFormSearch } from "react-icons/gr";
 
+
+ const items = [
+  "स्कटल्यान्डविरुद्ध फिल्डिङमा नेपाल",
+  "भारतसँगको खेलको तयारी",
+  "नेपालको मौसम विवरण",
+  "राजनीतिक समिक्षा",
+  "आजको राशिफल",
+];
 const HeroSecton = () => {
+  const [query, setQuery] = useState("")
+  const [show, setShow] = useState(false)
+  const HandleSearchClick = () => {
+  if (query.trim()) {
+    setShow(true);
+  }
+};
+  const HandleSearchBlur =()=>{
+    setTimeout(()=>setShow(false), 200)
+  }
+  
+ const FilteredItem = items.filter(item=>item.toLowerCase().includes(query.toLowerCase()))
    
   return (
     <div className='my-18 w-full'>
@@ -24,19 +45,43 @@ const HeroSecton = () => {
             <h2>Nepali Calendar 2082</h2>
             
         </div>
-        <div className='flex '> 
-            <GrFormSearch className='text-black my-5 text-xl'/>
+        <div className='flex flex-col'> 
+            <div className='flex'>
+              <GrFormSearch className='text-black my-5 text-xl '/>
 
-            <input type='text' placeholder='Search events' className='text-gray-800 my-4 '></input></div>
+            <input type='text' onClick={HandleSearchClick} onBlur={HandleSearchBlur} placeholder='Search events' value={query} onChange={(e)=>setQuery(e.target.value)} className='text-gray-800 my-4 '></input>
+            </div>
+            
+            
+            {show && query.trim() && FilteredItem.length>0 && <ul className='flex flex-col text-black'>
+            {FilteredItem.map((item, index)=>(
+              <li className='bg-white text-black rounded shadow p-2 ' 
+              key={index}
+              onClick={()=>{
+                  setQuery(item)
+                setShow(false)
+                }
+              }
+              
+              >
+                
+              {item}
+                </li> 
+            ))}
+            </ul>} 
+            </div>
+            
       
     </div>
+
     <div>
+      
         <div>
             <h2 className='text-black mx-4 '>समाचार बुलेटिन</h2>
 
           <div className='flex '>
-              <div className=' rounded-full mx-3 my-3 relative w-fit  drop-shadow-2xl  drop-shadow-inherit hover:scale-105 translate-1 duration-300 '>
-                <img src={'https://images.hamro-files.com/of1NqTMQD819qBok5VjMrKOXYak=/300x300/smart/https://12khari.top/uploads/posts/Nepal_sc-1750168399.jpg'} className='h-48 w-33 text-ellipsis object-cover bg-gradient-to-b from-gray-600 opacity-0 to-black opacity-100 rounded '
+              <div className=' rounded-full mx-3 my-3  relative w-fit   drop-shadow-inherit hover:scale-105 translate-1 duration-300   '>
+                <img src={'https://images.hamro-files.com/of1NqTMQD819qBok5VjMrKOXYak=/300x300/smart/https://12khari.top/uploads/posts/Nepal_sc-1750168399.jpg'} className=' h-48 w-33 text-ellipsis object-cover  rounded '
                 />
                 
                 <h3 className='text-white  absolute -my-12 left-2 px-2 text-sm py-1  rounded  '>स्कटल्यान्डविरुद्ध फिल्डिङमा नेपाल</h3>

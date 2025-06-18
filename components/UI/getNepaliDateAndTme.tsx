@@ -44,8 +44,132 @@
 
   return (
     
- <div className="p-6">
-  <h1 className="text-black text-center font-bold text-2xl mb-4">Calendar</h1>
+ <div className="p-6 flex w-screen mx-auto  justify-between ">
+  <div >
+    <div>
+      <h1 className="text-red-800 underline-offset-6 px-5 font-semibold underline text-2xl ">आउँदा दिनहरु
+</h1>
+<div className="border-2 border-amber-600 my-4 max-h-64 overflow-y-auto  ">
+  <div className="  flex ">
+
+<div className="flex">
+  <div className="bg-blue-900 w-12 text-center ">
+  ४<br></br>
+असार
+
+
+</div>
+<div className="text-black mx-2"><h1>गोरखकाली पूजा</h1> 
+<p className="font-normal text-gray-700">आज</p>
+</div>
+
+</div>
+
+
+
+
+</div>
+<div className="flex">
+  <div className="bg-blue-900 w-12 text-center ">
+  ५<br></br>
+असार
+
+
+</div>
+<div className="text-black mx-2 "><h1 className="text-ellipsis overflow-clip">द्वन्द्वमा यौन हिंसा <br></br>उन्मूलनको लागि <br></br>अन्तर्राष्ट्रिय दिवस</h1> 
+<p className="font-normal text-gray-700">आज</p>
+</div>
+
+</div>
+<div className="flex">
+  <div className="bg-blue-900 w-12 text-center ">
+  ५<br></br>
+असार
+
+
+</div>
+<div className="text-black mx-2"><h1>गोरखकाली पूजा</h1> 
+<p className="font-normal text-gray-700">आज</p>
+</div>
+
+</div>
+<div className="flex">
+  <div className="bg-blue-900 w-12 text-center ">
+  ४<br></br>
+असार
+
+
+</div>
+<div className="text-black mx-2"><h1>गोरखकाली पूजा</h1> 
+<p className="font-normal text-gray-700">आज</p>
+</div>
+
+</div>
+<div className="flex">
+  <div className="bg-blue-900 w-12 text-center ">
+  ४<br></br>
+असार
+
+
+</div>
+<div className="text-black mx-2"><h1>गोरखकाली पूजा</h1> 
+<p className="font-normal text-gray-700">आज</p>
+</div>
+
+</div>
+<div className="flex">
+  <div className="bg-blue-900 w-12 text-center ">
+  ४<br></br>
+असार
+
+
+</div>
+<div className="text-black mx-2"><h1>गोरखकाली पूजा</h1> 
+<p className="font-normal text-gray-700">आज</p>
+</div>
+
+</div>
+<div className="flex">
+  <div className="bg-blue-900 w-12 text-center ">
+  ४<br></br>
+असार
+
+
+</div>
+<div className="text-black mx-2"><h1>गोरखकाली पूजा</h1> 
+<p className="font-normal text-gray-700">आज</p>
+</div>
+
+</div>
+<div className="flex">
+  <div className="bg-blue-900 w-12 text-center ">
+  ४<br></br>
+असार
+
+
+</div>
+<div className="text-black mx-2"><h1>गोरखकाली पूजा</h1> 
+<p className="font-normal text-gray-700">आज</p>
+</div>
+
+</div>
+<div className="flex">
+  <div className="bg-blue-900 w-12 text-center ">
+  ४<br></br>
+असार
+
+
+</div>
+<div className="text-black mx-2"><h1>गोरखकाली पूजा</h1> 
+<p className="font-normal text-gray-700">आज</p>
+</div>
+
+</div>
+    </div>
+</div>
+  </div>
+ <div className="mr-30">
+   <h1 className="text-black text-center font-bold text-2xl mb-4">Calendar</h1>
 
   <div className="grid grid-cols-7 text-center font-bold mb-2">
     {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day) => (
@@ -54,17 +178,18 @@
       </div>
     ))}
   </div>
-  <div className="grid grid-cols-7 text-center font-bold gap-2 ">
+  <div className="grid grid-cols-7 text-center font-bold gap-8 ">
     {Array.from({ length: 30 }, (_, i) => (
       <div
         key={i}
-        className="text-gray-950 border border-zinc-400 p-2 rounded-md h-20 hover:bg-blue-900"
+        className="text-gray-950 border border-zinc-400 p-6 rounded-md h-20 hover:bg-blue-900"
       >
         <div className="font-semibold">{i + 1}</div>
         <div className="text-xs text-gray-500">Event</div>
       </div>
     ))}
   </div>
+ </div>
 </div>
 
  
